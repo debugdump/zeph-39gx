@@ -58,9 +58,12 @@ int main()
 	Tim4_Start(1);
         ENABLE_INT();
 	
-	emu_main();
+	//emu_main();
 	
 	while(1)
 	{
+          Buzzer_Start(1000);
+          Delay(5);
+          Buzzer_Stop();
 	}
 }

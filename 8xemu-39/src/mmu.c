@@ -41,8 +41,8 @@ void MMU_Init(void)
     MMU_InvalidateTLB();
 
     //MMU_SetMTT(int vaddrStart,int vaddrEnd,int paddrStart,int attr)
-    MMU_SetMTT(0x00000000,0x07f00000,0x00000000,RW_CB);  //bank0
-    MMU_SetMTT(0x08000000,0x0ff00000,0x08000000,RW_CB);  //bank1
+    MMU_SetMTT(0x00000000,0x07f00000,0x08000000,RW_CB);  //bank0
+    //MMU_SetMTT(0x08000000,0x0ff00000,0x08000000,RW_CB);  //bank1
     MMU_SetMTT(0x10000000,0x17f00000,0x10000000,RW_NCNB); //bank2
     MMU_SetMTT(0x18000000,0x1ff00000,0x18000000,RW_NCNB); //bank3
     MMU_SetMTT(0x20000000,0x27f00000,0x20000000,RW_NCNB); //bank4
